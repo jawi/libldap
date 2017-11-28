@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension;
 
@@ -27,7 +27,7 @@ public interface IChangePassword extends LdapExtension
   /**
    * Changes the password of the user denoted by a given DN and password to the
    * new password given.
-   * 
+   *
    * @param aUserDN
    *          the DN of the user requesting the modify password operation, may
    *          not be <code>null</code>;
@@ -45,7 +45,7 @@ public interface IChangePassword extends LdapExtension
   /**
    * Changes the password of the user denoted by a given DN to a
    * server-generated password and returns it.
-   * 
+   *
    * @param aUserDN
    *          the DN of the user requesting the modify password operation, may
    *          not be <code>null</code>;

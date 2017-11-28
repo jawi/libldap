@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap;
 
@@ -31,7 +31,7 @@ public enum AuthMechanisms
 
   /**
    * Creates a new AuthMechanisms object.
-   * 
+   *
    * @param aName
    *          the name to use.
    */
@@ -43,7 +43,7 @@ public enum AuthMechanisms
   /**
    * Returns the name of this authentication mechanism, as used in the LDAP
    * provider of the JDK.
-   * 
+   *
    * @return a name, never <code>null</code>.
    */
   public String getName()

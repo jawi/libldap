@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl;
 
@@ -81,7 +81,7 @@ public final class ChangePassword extends BaseExtension implements IChangePasswo
 
     /**
      * Creates a new ChangePasswordRequest object.
-     * 
+     *
      * @param aUserDN
      *          the DN of the user requesting the modify password operation;
      * @param aCurPasswd
@@ -94,7 +94,7 @@ public final class ChangePassword extends BaseExtension implements IChangePasswo
 
     /**
      * Creates a new ChangePasswordRequest object.
-     * 
+     *
      * @param aUserDN
      *          the DN of the user requesting the modify password operation;
      * @param aCurPasswd
@@ -212,7 +212,7 @@ public final class ChangePassword extends BaseExtension implements IChangePasswo
 
   /**
    * Creates a new ChangePassword object.
-   * 
+   *
    * @param aContextProvider
    *          the LDAP context provider to use.
    */

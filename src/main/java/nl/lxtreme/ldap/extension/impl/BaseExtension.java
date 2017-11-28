@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl;
 
@@ -25,7 +25,7 @@ abstract class BaseExtension implements LdapExtension
 
   /**
    * Creates a new BaseExtension object.
-   * 
+   *
    * @param aLdapContextProvider
    *          the LDAP context provider, cannot be <code>null</code>.
    * @throws IllegalArgumentException
@@ -44,7 +44,7 @@ abstract class BaseExtension implements LdapExtension
 
   /**
    * Returns the LDAP context.
-   * 
+   *
    * @return a LDAP context, never <code>null</code>.
    * @throws NamingException
    *           in case the connection to the LDAP server failed.
@@ -56,7 +56,7 @@ abstract class BaseExtension implements LdapExtension
 
   /**
    * Convenience method to perform an LDAPv3 "extended operation".
-   * 
+   *
    * @param aExtendedRequest
    *          the extended request to perform, cannot be <code>null</code>.
    * @return the extended response (created by the given extended request), may

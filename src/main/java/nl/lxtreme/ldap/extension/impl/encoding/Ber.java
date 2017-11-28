@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl.encoding;
 
@@ -46,7 +46,7 @@ public interface Ber
 
     /**
      * Creates a new DecodeException object.
-     * 
+     *
      * @param aMsg
      *          the message.
      */
@@ -65,7 +65,7 @@ public interface Ber
 
     /**
      * Creates a new EncodeException object.
-     * 
+     *
      * @param aMsg
      *          the message.
      */

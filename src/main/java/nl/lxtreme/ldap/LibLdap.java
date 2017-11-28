@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap;
 
@@ -63,7 +63,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * Use this constructor in case you want full control about how the LDAP
    * context is created. The given environment parameter is typically filled as:
    * </p>
-   * 
+   *
    * <pre>
    * final Hashtable&lt;String, String&gt; env = new Hashtable&lt;String, String&gt;();
    * env.put( Context.PROVIDER_URL, aServerURL + &quot;/dc=planon,dc=nl&quot; );
@@ -71,7 +71,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * env.put( Context.SECURITY_PRINCIPAL, &quot;my-ldap-username&quot; );
    * env.put( Context.SECURITY_CREDENTIALS, &quot;my-password&quot; );
    * </pre>
-   * 
+   *
    * @param aServerURL
    *          the server URL to use, like "ldap://localhost:369/";
    * @param aEnvironment
@@ -117,7 +117,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * Use this constructor in case of "simple" authentication, using username and
    * password.
    * </p>
-   * 
+   *
    * @param aServerURL
    *          the server URL to use, like "ldap://localhost:369/";
    * @param aBaseDN
@@ -150,7 +150,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * Use this constructor in case of "simple" authentication, using username and
    * password.
    * </p>
-   * 
+   *
    * @param aServerURL
    *          the server URL to use, like "ldap://localhost:369/";
    * @param aBaseDN
@@ -177,7 +177,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Registers a LDAPv3 extension.
-   * 
+   *
    * @param aExtensionOID
    *          the extension OID to register;
    * @param aLdapExtension
@@ -215,7 +215,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
   /**
    * Parses the given array of controls for a PagedResultsResponseControl and if
    * found returns its cookie.
-   * 
+   *
    * @param aControls
    *          the controls to parse, may be <code>null</code>.
    * @return the cookie in case a PagedResultsResponseControl was found, or an
@@ -247,7 +247,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * NOTE: the given password is prefixed and suffixed with double quotes. This
    * is needed for changing passwords on Microsoft Active Directory servers!
    * </p>
-   * 
+   *
    * @param aPassword
    *          the password to encode, cannot be <code>null</code>.
    * @return the base64-encoded password, never <code>null</code>.
@@ -261,7 +261,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Binds to the LDAP server with the given username and credentials.
-   * 
+   *
    * @param aUserDN
    *          the username to connect to the LDAP server;
    * @param aPassword
@@ -306,7 +306,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * 9005a (unicodePwd)</code>. In general when this exception is thrown it
    * means that a policy violation occurred.
    * </p>
-   * 
+   *
    * @param aUserDN
    *          the DN of the user to change the password for;
    * @param aOldPassword
@@ -420,7 +420,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Closes the connection to the LDAP server.
-   * 
+   *
    * @throws NamingException
    *           in case the connection to the LDAP server failed;
    * @throws IllegalStateException
@@ -437,7 +437,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Retrieves all attributes for a given distinguished name.
-   * 
+   *
    * @param aDN
    *          the distinguished name to retrieve the attributes for, cannot be
    *          <code>
@@ -456,7 +456,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Returns the first attribute value of a given attribute value.
-   * 
+   *
    * @param aAttribute
    *          the attribute to search in.
    * @return the attribute value if found, <code>null</code> if not found.
@@ -474,7 +474,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Finds a given attribute value in a given attribute.
-   * 
+   *
    * @param aAttributes
    *          the attributes to search in;
    * @param aAttributeID
@@ -490,7 +490,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Retrieves directly a value for a given attribute.
-   * 
+   *
    * @param aDN
    *          the distinguished name to retrieve the attributes for, cannot be
    *          <code>
@@ -509,7 +509,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Returns the first attribute value of a given attribute value.
-   * 
+   *
    * @param aAttribute
    *          the attribute to search in.
    * @return the attribute value if found, <code>null</code> if not found.
@@ -532,7 +532,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Finds a given attribute value in a given attribute.
-   * 
+   *
    * @param aAttributes
    *          the attributes to search in;
    * @param aAttributeID
@@ -548,7 +548,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Tries to determine which base DN the server uses.
-   * 
+   *
    * @return
    * @throws NamingException
    */
@@ -592,7 +592,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Returns the current LDAP context creating it when necessary.
-   * 
+   *
    * @return the LDAP context, never <code>null</code>.
    * @throws NamingException
    *           in case the connection to the LDAP server failed.
@@ -609,7 +609,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Creates a new instance of the extension denoted by the given object ID.
-   * 
+   *
    * @param aExtensionOID
    *          the object ID of the extension to create an instance for, should
    *          be a valid extension.
@@ -663,7 +663,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * remote LDAP server. It does this by comparing (parts of) the OIDs returned
    * by the supported extensions of the server.
    * </p>
-   * 
+   *
    * @return a server type, never <code>null</code>.
    * @throws NamingException
    *           in case of LDAP problems.
@@ -737,7 +737,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Returns the server URL.
-   * 
+   *
    * @return the server URL, like "ldap://localhost".
    */
   public final String getServerURL()
@@ -748,7 +748,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
   /**
    * Convenience method to determine whether the server supports a particular
    * LDAPv3 extension.
-   * 
+   *
    * @return an array of all supported server extensions (their object IDs),
    *         never <code>
    *         null</code>.
@@ -779,7 +779,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
   /**
    * Convenience method to determine whether the extension denoted by the given
    * object ID is supported by this library.
-   * 
+   *
    * @param aExtensionOID
    *          the object ID of the extension (something like "1.3.5...").
    * @return <code>true</code> if this library supports the given extension,
@@ -793,7 +793,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Returns whether the given extension is supported by the server.
-   * 
+   *
    * @param aExtension
    *          the extension to check for server support.
    * @return <code>true</code> if the server supports the requested extension,
@@ -809,7 +809,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
   /**
    * Convenience method to determine whether the server supports a particular
    * LDAPv3 extension.
-   * 
+   *
    * @param aExtensionOID
    *          the object ID of the extension (something like "1.3.5...").
    * @return <code>true</code> if the server supports the requested extension,
@@ -825,7 +825,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Performs a simple LDAP query with subtree scope and returns the results.
-   * 
+   *
    * @param aQuery
    *          the LDAP query to execute.
    * @return a collection of search results, never <code>null</code>.
@@ -840,7 +840,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Performs a simple LDAP query and returns the results.
-   * 
+   *
    * @param aQuery
    *          the LDAP query to execute;
    * @param aSearchScope
@@ -870,7 +870,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Performs a simple LDAP query with subtree scope and returns the results.
-   * 
+   *
    * @param aDN
    *          the distinguished name to search under (may be <code>null</code>
    *          or empty);
@@ -888,7 +888,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Performs a simple LDAP query and returns the results.
-   * 
+   *
    * @param aDN
    *          DOCUMENT ME!
    * @param aFilter
@@ -952,7 +952,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
    * Use this method for example after starting a TLS-connection with the LDAP
    * server.
    * </p>
-   * 
+   *
    * @throws NamingException
    *           in case the connection to the LDAP server failed.
    */
@@ -963,7 +963,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Sets the authentication mechanisms to use for binding with the LDAP server.
-   * 
+   *
    * @param aAuthMechanisms
    *          the authentication mechanisms to use, can be <code>null</code> or
    *          empty to use no authentication.
@@ -995,7 +995,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Retrieves all attributes for a given distinguished name.
-   * 
+   *
    * @param aAttributes
    *          the attributes to retrieve the values for.
    * @return the attributes of the given DN as map of {ID -> value}.
@@ -1036,7 +1036,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Returns the supported LDAPv3 extensions of the server.
-   * 
+   *
    * @return the attributes containing the server extensions.
    * @throws NamingException
    *           in case the connection to the LDAP server failed.
@@ -1048,7 +1048,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Converts a given object-array into a string-array.
-   * 
+   *
    * @param aInput
    *          the input array to convert, can be <code>null</code> or empty.
    * @return the string array, never <code>null</code>.
@@ -1069,7 +1069,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Finds a given attribute value in a given attribute.
-   * 
+   *
    * @param aAttribute
    *          the attribute to search in;
    * @param aAttributeValue
@@ -1096,7 +1096,7 @@ public class LibLdap implements LdapContextProvider, LdapAttributes
 
   /**
    * Finds a given attribute value in a given attribute.
-   * 
+   *
    * @param aAttributes
    *          the attributes to search in;
    * @param aAttributeID

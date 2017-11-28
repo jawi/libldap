@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl.encoding;
 
@@ -43,7 +43,7 @@ public final class BerEncoder implements Ber
   /**
    * Creates a BER buffer of a specified size for encoding. Specify the initial
    * bufsize. Buffer will be expanded as needed.
-   * 
+   *
    * @param aBufSize
    *          The number of bytes for the buffer.
    */
@@ -61,7 +61,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Begin encoding a sequence with a aTag.
-   * 
+   *
    * @param aTag
    *          the expected sequence aTag.
    */
@@ -95,13 +95,13 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes a boolean. <blockquote>
-   * 
+   *
    * <pre>
    * BER boolean ::= 0x01 0x01 {0xff|0x00}
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aBoolean
    *          the boolean value to encode.
    */
@@ -112,13 +112,13 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes a boolean and a aTag <blockquote>
-   * 
+   *
    * <pre>
    * BER boolean w aTag ::= aTag 0x01 {0xff|0x00}
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aBoolean
    *          the boolean value to encode;
    * @param aTag
@@ -135,7 +135,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Encode a single byte.
-   * 
+   *
    * @param aByte
    *          the byte to encode.
    */
@@ -147,13 +147,13 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes an int. <blockquote>
-   * 
+   *
    * <pre>
    * BER integer ::= 0x02 berlength byte {byte}*
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aInt
    *          the integer to encode.
    */
@@ -164,13 +164,13 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes an int and a aTag. <blockquote>
-   * 
+   *
    * <pre>
    * BER integer w aTag ::= aTag berlength byte {byte}*
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aInt
    *          the integer to encode;
    * @param aTag
@@ -192,7 +192,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes an octet string and a aTag.
-   * 
+   *
    * @param aBuf
    *          the string (byte array) to encode;
    * @param aTag
@@ -207,7 +207,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes a portion of an octet string and a aTag.
-   * 
+   *
    * @param aBuf
    *          the string (byte array) to encode;
    * @param aTag
@@ -235,16 +235,16 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes a string. <blockquote>
-   * 
+   *
    * <pre>
    * BER string ::= 0x04 strlen byte1 byte2...
    * </pre>
-   * 
+   *
    * </blockquote>
    * <p>
    * The string is converted into bytes using UTF-8 or ISO-Latin-1.
    * </p>
-   * 
+   *
    * @param aString
    *          the string to encode;
    * @param aEncodeUTF8
@@ -261,13 +261,13 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes a string and a aTag. <blockquote>
-   * 
+   *
    * <pre>
    * BER string w aTag ::= aTag strlen byte1 byte2...
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aString
    *          the string to encode;
    * @param aTag
@@ -327,7 +327,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes an array of strings.
-   * 
+   *
    * @param aStrings
    *          the string array to encode;
    * @param aEncodeUTF8
@@ -351,7 +351,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Terminate a BER sequence.
-   * 
+   *
    * @throws EncodeException
    *           in case encoding failed;
    * @throws IllegalStateException
@@ -405,7 +405,7 @@ public final class BerEncoder implements Ber
    * unmatched beginSeq() and endSeq() pairs were encountered. Not entire buffer
    * contains encoded bytes. Use getDataLen() to determine number of encoded
    * bytes. Use getBuffer(true) to get rid of excess bytes in array.
-   * 
+   *
    * @return the byte buffer containing the BER-encoded value(s).
    * @throws IllegalStateException
    *           If buffer contains unbalanced sequence.
@@ -421,7 +421,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Gets the number of encoded bytes in this BER buffer.
-   * 
+   *
    * @return the number of encoded bytes.
    */
   public int getDataLen()
@@ -431,7 +431,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Gets the buffer that contains the BER encoding, trimming unused bytes.
-   * 
+   *
    * @return the buffer.
    */
   public byte[] getTrimmedBuf()
@@ -461,7 +461,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes an int using numbytes for the actual encoding.
-   * 
+   *
    * @param aInt
    *          the integer to encode;
    * @param aTag
@@ -498,7 +498,7 @@ public final class BerEncoder implements Ber
 
   /**
    * Encodes a length.
-   * 
+   *
    * @param aLength
    *          the length value to encode.
    * @throws EncodeException
@@ -540,7 +540,7 @@ public final class BerEncoder implements Ber
    * Ensures that there are at least "len" unused bytes in "buf". When more
    * space is needed "buf" is expanded by a factor of BUF_GROWTH_FACTOR, then
    * "len" bytes are added if "buf" still isn't large enough.
-   * 
+   *
    * @param aLen
    *          the number of bytes that should be free at least.
    */
@@ -565,7 +565,7 @@ public final class BerEncoder implements Ber
   /**
    * Shifts contents of buf in the range [start,start+len) a specified amount.
    * Positive shift value means shift to the right.
-   * 
+   *
    * @param aStart
    *          the start index;
    * @param aLen

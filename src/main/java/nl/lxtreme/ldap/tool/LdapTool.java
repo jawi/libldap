@@ -1,3 +1,8 @@
+/*
+ * LibLDAP - Small LDAP library for Java.
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ */
 package nl.lxtreme.ldap.tool;
 
 
@@ -11,7 +16,7 @@ import nl.lxtreme.ldap.*;
 
 
 /**
- * 
+ *
  */
 public final class LdapTool
 {
@@ -44,7 +49,7 @@ public final class LdapTool
 
   /**
    * Creates a new LdapTool object.
-   * 
+   *
    * @param aArgs
    *          the cmd line arguments.
    */
@@ -136,7 +141,7 @@ public final class LdapTool
 
   /**
    * MAIN ENTRY POINT
-   * 
+   *
    * @param aArgs
    *          the cmd line arguments.
    * @throws Exception
@@ -150,7 +155,7 @@ public final class LdapTool
 
   /**
    * Binds to the server with the supplied credentials.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -211,7 +216,7 @@ public final class LdapTool
 
   /**
    * Performs an LDAP query.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -244,7 +249,7 @@ public final class LdapTool
 
   /**
    * Closes the LDAP connection.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -261,7 +266,7 @@ public final class LdapTool
 
   /**
    * Connects to the LDAP server and (optional) bind-DN.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -292,7 +297,7 @@ public final class LdapTool
 
   /**
    * Shows the supported LDAP versions.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -312,7 +317,7 @@ public final class LdapTool
 
   /**
    * Lists the supported (SASL) authentication mechanisms.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -332,7 +337,7 @@ public final class LdapTool
 
   /**
    * Lists the supported extensions.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -356,7 +361,7 @@ public final class LdapTool
 
   /**
    * Tries to ping the server.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -374,7 +379,7 @@ public final class LdapTool
 
   /**
    * Performs an LDAP query.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -421,7 +426,7 @@ public final class LdapTool
 
   /**
    * Tries to determine the LDAP server type.
-   * 
+   *
    * @param aCI
    *          the command interpreter to use.
    */
@@ -458,7 +463,7 @@ public final class LdapTool
 
   /**
    * Runs the tool.
-   * 
+   *
    * @throws Exception
    *           IllegalArgumentException in case of illegal arguments;
    */

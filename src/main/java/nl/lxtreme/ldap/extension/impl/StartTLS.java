@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl;
 
@@ -31,7 +31,7 @@ public class StartTLS extends BaseExtension implements IStartTLS
 
   /**
    * Creates a new StartTLS object.
-   * 
+   *
    * @param aContextProvider
    *          the LDAP context provider to use.
    */
@@ -97,7 +97,7 @@ public class StartTLS extends BaseExtension implements IStartTLS
 
   /**
    * Returns the start-TLS response, lazy creating the request if necessary.
-   * 
+   *
    * @return a start-TLS response, never <code>null</code>.
    * @throws NamingException
    *           in case of connection problems.

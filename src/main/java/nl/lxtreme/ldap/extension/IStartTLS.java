@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension;
 
@@ -36,7 +36,7 @@ public interface IStartTLS extends LdapExtension
    * <li>Note 2: The OpenLDAP server, upon receiving the close message, will
    * shut down the connection instead of downgrading it to a plain connection.</li>
    * </ul>
-   * 
+   *
    * @throws NamingException
    *           in case the connection to the LDAP server failed;
    * @throws IOException
@@ -50,7 +50,7 @@ public interface IStartTLS extends LdapExtension
 
   /**
    * Sets the hostname verifier to use during the TLS negotiation.
-   * 
+   *
    * @param aHostnameVerifier
    *          a hostname verifier, may be <code>null</code> to disable its use.
    */
@@ -63,7 +63,7 @@ public interface IStartTLS extends LdapExtension
    * <em>must</em> reconnect to the LDAP server to make the authenticated user
    * known for this session.
    * </p>
-   * 
+   *
    * @throws NamingException
    *           in case the connection to the LDAP server failed;
    * @throws IOException

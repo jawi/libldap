@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap;
 
@@ -21,7 +21,7 @@ public enum ServerType
 
   /**
    * Creates a new ServerType object.
-   * 
+   *
    * @param aDisplayName
    *          the display name of this server type.
    */
@@ -32,7 +32,7 @@ public enum ServerType
 
   /**
    * Returns the display name of this server type.
-   * 
+   *
    * @return a display name, never <code>null</code>.
    */
   public String getDisplayName()

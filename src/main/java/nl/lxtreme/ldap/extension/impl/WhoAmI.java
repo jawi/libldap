@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl;
 
@@ -75,7 +75,7 @@ public class WhoAmI extends BaseExtension implements IWhoAmI
 
   /**
    * Creates a new WhoAmI object.
-   * 
+   *
    * @param aContextProvider
    *          the LDAP context provider to use.
    */

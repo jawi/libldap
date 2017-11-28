@@ -1,7 +1,7 @@
 /*
  * LibLDAP - Small LDAP library for Java.
- * 
- * (C) Copyright 2010-2012, J.W. Janssen <j.w.janssen@lxtreme.nl>
+ *
+ * (C) Copyright 2010-2017, J.W. Janssen <j.w.janssen@lxtreme.nl>
  */
 package nl.lxtreme.ldap.extension.impl.encoding;
 
@@ -26,7 +26,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Creates a BER decoder that reads bytes from the specified buffer.
-   * 
+   *
    * @param aBuf
    *          the buffer to decode;
    * @param aOffset
@@ -47,7 +47,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Returns the number of unparsed bytes in this BER buffer.
-   * 
+   *
    * @return the number of bytes left (>= 0).
    */
   public int bytesLeft()
@@ -58,7 +58,7 @@ public final class BerDecoder implements Ber
   /**
    * Returns the current parse position. It points to the byte that will be
    * parsed next. Useful for parsing sequences.
-   * 
+   *
    * @return the current parse position.
    */
   public int getParsePosition()
@@ -68,7 +68,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses an ASN_BOOLEAN tagged integer from this BER buffer.
-   * 
+   *
    * @return true if the tagged integer is 0; false otherwise.
    * @throws DecodeException
    *           in case decoding failed.
@@ -80,7 +80,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses the next byte in this BER buffer.
-   * 
+   *
    * @return The byte parsed.
    * @throws DecodeException
    *           in case decoding failed.
@@ -96,7 +96,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses an ASN_ENUMERATED tagged integer from this BER buffer.
-   * 
+   *
    * @return The tag of enumeration.
    * @throws DecodeException
    *           in case decoding failed.
@@ -108,7 +108,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses an ASN_INTEGER tagged integer from this BER buffer.
-   * 
+   *
    * @return The value of the integer.
    * @throws DecodeException
    *           in case decoding failed.
@@ -120,7 +120,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses a possibly variable length field.
-   * 
+   *
    * @return the parsed length, as integer.
    * @throws DecodeException
    *           in case decoding failed.
@@ -165,13 +165,13 @@ public final class BerDecoder implements Ber
   /**
    * Parses an octet string of a given type(tag) from this BER buffer.
    * <blockquote>
-   * 
+   *
    * <pre>
    * BER Binary Data of type "tag" ::= tag length {byte}*
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aTag
    *          the tag to look for;
    * @param aReturnLen
@@ -217,7 +217,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses the next sequence in this BER buffer.
-   * 
+   *
    * @param aReturnLen
    *          an array for returning size of the sequence in bytes. If
    *          <code>null</code>, the size is not returned.
@@ -238,7 +238,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses a simple string (ASN_SIMPLE).
-   * 
+   *
    * @param aDecodeUTF8
    *          If <code>true</code>, use UTF-8 when decoding the string;
    *          otherwise use ISO-Latin-1 (8859_1). Use <code>true</code> for
@@ -254,13 +254,13 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses a string of a given tag from this BER buffer. <blockquote>
-   * 
+   *
    * <pre>
    * BER simple string ::= tag length {byte}*
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aTag
    *          the tag that precedes the string;
    * @param aDecodeUTF8
@@ -338,7 +338,7 @@ public final class BerDecoder implements Ber
 
   /**
    * Returns the next byte in this BER buffer without consuming it.
-   * 
+   *
    * @return The next byte.
    * @throws DecodeException
    *           in case decoding failed.
@@ -364,7 +364,7 @@ public final class BerDecoder implements Ber
   /**
    * Used to skip bytes. Usually used when trying to recover from parse error.
    * Don't need to be public right now?
-   * 
+   *
    * @param aNumber
    *          The number of bytes to skip.
    * @throws DecodeException
@@ -381,13 +381,13 @@ public final class BerDecoder implements Ber
 
   /**
    * Parses an integer that's preceded by a tag. <blockquote>
-   * 
+   *
    * <pre>
    * BER integer ::= tag length byte {byte}*
    * </pre>
-   * 
+   *
    * </blockquote>
-   * 
+   *
    * @param aTag
    *          the tag to expect during parsing.
    * @return the parsed integer.
